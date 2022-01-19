@@ -230,7 +230,7 @@ dhd_os_detach_pktlog(dhd_pub_t *dhdp)
 #ifdef DHD_PKT_LOGGING_DBGRING
 int dhd_pktlog_is_enabled(dhd_pub_t *dhdp)
 {
-	struct dhd_pktlog_ring *pktlog_ring;
+	struct dhd_pktlog_ring __maybe_unused *pktlog_ring;
 
 	if (!dhdp || !dhdp->pktlog) {
 		DHD_ERROR(("%s(): dhdp=%p pktlog=%p\n",
