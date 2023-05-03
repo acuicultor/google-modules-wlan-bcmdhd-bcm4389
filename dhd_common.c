@@ -5402,8 +5402,8 @@ dngl_host_event_process(dhd_pub_t *dhdp, bcm_dngl_event_t *event,
 			switch (ver) {
 			case DNGL_E_SPMI_RESET_IND_VERSION_1:
 			{
-				uint16 num_resets = ltoh32(spmi_reset_ind_v1_ptr->num_resets);
-				uint16 slave_idx = ltoh32(spmi_reset_ind_v1_ptr->slave_idx);
+				uint16 __maybe_unused num_resets = ltoh32(spmi_reset_ind_v1_ptr->num_resets);
+				uint16 __maybe_unused slave_idx = ltoh32(spmi_reset_ind_v1_ptr->slave_idx);
 				DHD_EVENT(("DNGL_E_SPMI_RESET_IND resets=%u SPMI core=%u\n",
 					num_resets, slave_idx));
 				break;

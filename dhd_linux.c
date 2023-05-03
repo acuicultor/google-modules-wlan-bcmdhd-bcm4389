@@ -18170,7 +18170,7 @@ dhd_os_check_wakelock_all(dhd_pub_t *pub)
 #if defined(CONFIG_HAS_WAKELOCK)
 	int l1, l2, l7, l8, l10;
 	int l5 = 0, l6 = 0;
-	int c, lock_active;
+	int __maybe_unused c, lock_active;
 #endif /* CONFIG_HAS_WAKELOCK */
 	dhd_info_t *dhd;
 

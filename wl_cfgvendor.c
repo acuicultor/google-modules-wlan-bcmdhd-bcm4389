@@ -8941,7 +8941,7 @@ static int wl_cfgvendor_nla_put_pktlogdump_data(struct sk_buff *skb,
 }
 #endif /* DHD_PKT_LOGGING */
 
-static void wl_cfgvendor_dbg_send_file_dump_evt(void *ctx, const void *data,
+static void __attribute__((unused)) wl_cfgvendor_dbg_send_file_dump_evt(void *ctx, const void *data,
 	const uint32 len, const uint32 fw_len)
 {
 	struct net_device *ndev = ctx;
@@ -8949,7 +8949,7 @@ static void wl_cfgvendor_dbg_send_file_dump_evt(void *ctx, const void *data,
 	gfp_t kflags;
 	struct sk_buff *skb = NULL;
 	struct bcm_cfg80211 *cfg;
-	dhd_pub_t *dhd_pub;
+	dhd_pub_t __maybe_unused *dhd_pub;
 #ifdef DHD_PKT_LOGGING
 	int ret = BCME_OK;
 #endif
